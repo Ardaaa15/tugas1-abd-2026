@@ -1,6 +1,6 @@
 # Tugas 1: Eksplorasi dan Analisis Dataset Besar Indonesia
 
-Template untuk Tugas 1 mata kuliah Analisis Big Data. Setelah repository GitHub Classroom dibuat, ubah nama repository menjadi `tugas1-[username_github]`.
+Template untuk Tugas 1 mata kuliah Analisis Big Data. Setelah repository GitHub Classroom dibuat, ubah nama repository menjadI `tugas1-[username_github]`.
 
 ## Milestone
 
