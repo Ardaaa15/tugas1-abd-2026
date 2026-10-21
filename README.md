@@ -11,7 +11,7 @@ Template untuk Tugas 1 mata kuliah Analisis Big Data. Setelah repository GitHub 
 | Milestone 3 | Pertemuan 8 | Analisis temporal/ruang dan minimal 6 visualisasi interaktif |
 | Final | Pertemuan 10 | Minimal 5 insight, Dockerfile, dan dokumentasi akhir |
 
-## Output yang Diharapkan
+## Output yang Diharapkan.
 
 Pada final submission, repository harus menghasilkan analisis yang dapat dijalankan ulang dari awal dan memuat:
 
