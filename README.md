@@ -1,4 +1,4 @@
-# Tugas 1: Eksplorasi dan Analisis Dataset Besar Indonesia
+﻿# Tugas 1: Eksplorasi dan Analisis Dataset Besar Indonesia
 
 Template untuk Tugas 1 mata kuliah Analisis Big Data. Setelah repository GitHub Classroom dibuat, ubah nama repository menjadI `tugas1-[username_github]`.
 
@@ -52,17 +52,17 @@ Target kualitas tertinggi adalah analisis yang efisien, terdokumentasi, dapat di
 
 ```text
 .
-├── .github/workflows/lint_check.yml
-├── data/README.md
-├── notebooks/
-│   ├── 01_data_profiling.ipynb
-│   ├── 02_data_cleaning.ipynb
-│   └── 03_eda_and_insights.ipynb
-├── output/figures/
-├── src/
-├── Dockerfile
-├── requirements.txt
-└── README.md
+â”œâ”€â”€ .github/workflows/lint_check.yml
+â”œâ”€â”€ data/README.md
+â”œâ”€â”€ notebooks/
+â”‚   â”œâ”€â”€ 01_data_profiling.ipynb
+â”‚   â”œâ”€â”€ 02_data_cleaning.ipynb
+â”‚   â””â”€â”€ 03_eda_and_insights.ipynb
+â”œâ”€â”€ output/figures/
+â”œâ”€â”€ src/
+â”œâ”€â”€ Dockerfile
+â”œâ”€â”€ requirements.txt
+â””â”€â”€ README.md
 ```
 
 # Tugas 1 Analisis Big Data 2026
@@ -110,13 +110,13 @@ Pastikan Docker sudah terpasang pada komputer Anda.
 ### Build Docker Image
 
 ```bash
-docker build -t tugas1-bigdata .
+docker build -t id-reg-kg-2511 .
 ```
 
 ### Jalankan Container
 
 ```bash
-docker run --rm -p 8888:8888 -v "$(pwd)":/home/jovyan/work tugas1-bigdata
+docker run --rm -p 8888:8888 -v "$(pwd)":/home/jovyan/work id-reg-kg-2511
 ```
 
 ### Membuka JupyterLab
@@ -203,8 +203,8 @@ https://github.com/USERNAME-ANDA/tugas1-abd-2026
 ## Menjalankan Project
 
 ```bash
-docker build -t tugas1-bigdata .
-docker run --rm -p 8888:8888 -v "$(pwd)":/home/jovyan/work tugas1-bigdata
+docker build -t id-reg-kg-2511 .
+docker run --rm -p 8888:8888 -v "$(pwd)":/home/jovyan/work id-reg-kg-2511
 ```
 
 Buka JupyterLab pada `http://localhost:8888/lab`. Konfigurasi Dockerfile menjalankan JupyterLab tanpa password atau token untuk penggunaan lokal. Jangan gunakan konfigurasi ini pada server atau jaringan publik. Letakkan dataset pada `data/raw/`, lalu sesuaikan `DATA_PATH` di notebook profiling.
@@ -225,12 +225,35 @@ Buka JupyterLab pada `http://localhost:8888/lab`. Konfigurasi Dockerfile menjala
 - Setiap penggunaan AI harus dicantumkan pada bagian AI Disclosure Statement di bawah.
 - Pelanggaran pertama bernilai 0 untuk tugas terkait; pelanggaran berikutnya dapat berakibat nilai E untuk mata kuliah sesuai ketentuan akademik.
 
+## Ringkasan Milestone 1 dan 2
+
+### Milestone 1: Data Profiling
+
+- Dataset regulasi mencakup 748.558 baris pada hasil pemeriksaan.
+- Profiling meliputi struktur kolom, tipe data, nilai kosong, keunikan `global_id`, validitas tahun, tanggal berlaku, dan indikasi masalah encoding.
+- Notebook profiling: `notebooks/01_data_profiling.ipynb`.
+
+### Milestone 2: Data Cleaning dan Validasi
+
+- Proses cleaning dan validasi didokumentasikan dalam `notebooks/02_data_cleaning.ipynb`.
+- Validasi akhir mencatat 748.558 baris dan 748.558 `global_id` unik, tanpa `global_id` null maupun duplikat.
+- Sebanyak 567 nilai tahun 0000 dan 2 nilai tahun masa depan ditandai untuk pemeriksaan.
+- Sebanyak 259.467 baris memiliki `effective_date` kosong.
+- Sebanyak 61 baris ditandai memiliki indikasi masalah encoding pada `enacting_body`.
+- Hasil validasi tersedia di `output/data_quality_report.json`.
+- Ringkasan milestone tersedia di `docs/milestone_summary.md`.
+
+### Validasi Docker
+
+- Docker image berhasil dibangun dengan nama `id-reg-kg-2511`.
+- Container berhasil berjalan dengan status `healthy`.
+- JupyterLab berhasil diakses melalui `http://localhost:8888`.
+- Dataset Parquet besar dikecualikan dari Git dan Docker build context. Petunjuk penyediaan dataset tersedia di `data/README.md`.
+
 ## AI Disclosure Statement
 
-Isi bagian ini sebelum pengumpulan akhir.
-
-> Alat AI yang digunakan: [nama alat].
+> **Alat AI yang digunakan:** ChatGPT (OpenAI).
 >
-> Bagian yang dibantu: [contoh: penjelasan error Polars atau review dokumentasi].
+> **Bagian yang dibantu:** Penjelasan konsep, debugging Git dan Docker, serta penyusunan dokumentasi proyek.
 >
-> Verifikasi yang dilakukan: [contoh: menjalankan ulang kode, memeriksa dokumentasi resmi, dan memahami setiap cell].
+> **Verifikasi yang dilakukan:** Memeriksa hasil profiling dan cleaning, meninjau laporan kualitas data, membangun Docker image, menjalankan container hingga berstatus healthy, dan memastikan JupyterLab dapat diakses secara lokal. Hasil pekerjaan diperiksa kembali sebelum pengumpulan.
