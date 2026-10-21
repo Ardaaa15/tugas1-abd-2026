@@ -1,0 +1,16 @@
+﻿# Exclude large raw datasets
+*.parquet
+
+# Exclude Git metadata
+.git/
+
+# Exclude local cache and temporary files
+.cache/
+**/.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Exclude generated archives
+*.zip
